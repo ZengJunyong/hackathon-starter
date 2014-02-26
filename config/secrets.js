@@ -1,7 +1,7 @@
 module.exports = {
   db: 'localhost',
 
-  localAuth: true,
+  localAuth: false,
   sessionSecret: "Your Session Secret goes here",
 
   mailgun: {
@@ -30,13 +30,13 @@ module.exports = {
 
   facebookAuth: true,
   facebook: {
-    clientID: 'Your App ID',
-    clientSecret: 'Your App Secret',
+    clientID: '652484128121792',
+    clientSecret: '4b7b54cc3c8517206eea9f9ce6335786',
     callbackURL: '/auth/facebook/callback',
     passReqToCallback: true
   },
 
-  githubAuth: true,
+  githubAuth: false,
   github: {
     clientID: 'Your Client ID',
     clientSecret: 'Your Client Secret',
@@ -44,7 +44,7 @@ module.exports = {
     passReqToCallback: true
   },
 
-  twitterAuth: true,
+  twitterAuth: false,
   twitter: {
     consumerKey: 'Your Consumer Key',
     consumerSecret: 'Your Consumer Secret',
@@ -52,7 +52,7 @@ module.exports = {
     passReqToCallback: true
   },
 
-  googleAuth: true,
+  googleAuth: false,
   google: {
     clientID: 'Your Client ID',
     clientSecret: 'Your Client Secret',
