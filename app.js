@@ -139,6 +139,15 @@ app.post('/api/venmo', passportConf.isAuthenticated, passportConf.isAuthorized, 
 
 app.get('/auth/facebook', passport.authenticate('facebook', { scope: ['email', 'user_location'] }));
 app.get('/auth/facebook/callback', passport.authenticate('facebook', { successRedirect: '/', failureRedirect: '/login' }));
+app.get('/auth/linkedin',
+    passport.authenticate('linkedin', { state: 'SOME STATE' }),
+    function(req, res){
+    });
+app.get('/auth/linkedin/callback',
+    passport.authenticate('linkedin', { failureRedirect: '/login' }),
+    function(req, res) {
+        res.redirect('/');
+    });
 app.get('/auth/github', passport.authenticate('github'));
 app.get('/auth/github/callback', passport.authenticate('github', { successRedirect: '/', failureRedirect: '/login' }));
 app.get('/auth/google', passport.authenticate('google', { scope: 'profile email' }));

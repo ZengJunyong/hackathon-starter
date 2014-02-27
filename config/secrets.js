@@ -1,5 +1,5 @@
 module.exports = {
-  db: 'localhost',
+  db: '107.170.243.227',
 
   localAuth: false,
   sessionSecret: "Your Session Secret goes here",
@@ -28,11 +28,20 @@ module.exports = {
     secret: 'Your API Secret'
   },
 
-  facebookAuth: true,
+  facebookAuth: false,
   facebook: {
-    clientID: '652484128121792',
-    clientSecret: '4b7b54cc3c8517206eea9f9ce6335786',
+    clientID: '221923001346144',
+    clientSecret: '9c4e0ee8d2079825c356caf42435e9f6',
     callbackURL: '/auth/facebook/callback',
+    passReqToCallback: true
+  },
+
+  linkedinAuth: true,
+  linkedin: {
+    clientID: '758pf4rqf55pzg',
+    clientSecret: 'Ccn6EXbyNUXuto05',
+    scope:        [ 'r_basicprofile', 'r_emailaddress'],
+    callbackURL: 'http://107.170.243.227:3000/auth/linkedin/callback',
     passReqToCallback: true
   },
 

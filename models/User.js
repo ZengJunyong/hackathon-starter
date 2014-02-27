@@ -7,6 +7,7 @@ var userSchema = new mongoose.Schema({
   password: String,
 
   facebook: { type: String, unique: true, sparse: true },
+  linkedin: { type: String, unique: true, sparse: true },
   twitter: { type: String, unique: true, sparse: true },
   google: { type: String, unique: true, sparse: true },
   github: { type: String, unique: true, sparse: true },

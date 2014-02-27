@@ -11,6 +11,10 @@ block content
             a.btn.btn-facebook(href='/auth/facebook')
               i.fa.fa-facebook
               | Facebook
+          if secrets.linkedin
+            a.btn.btn-facebook(href='/auth/linkedin')
+              i.fa
+              | LinkedIn
           if secrets.twitterAuth
             a.btn.btn-twitter(href='/auth/twitter')
               i.fa.fa-twitter
